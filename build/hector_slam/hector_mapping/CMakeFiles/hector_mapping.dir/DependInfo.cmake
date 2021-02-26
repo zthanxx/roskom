@@ -14,6 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BOOST_ALL_NO_LIB"
   "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
   "BOOST_THREAD_DYN_LINK"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
@@ -24,6 +25,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/sutanmsa/catkin_ws/devel/include"
   "/home/sutanmsa/catkin_ws/src/hector_slam/hector_mapping/include/hector_slam_lib"
+  "/home/sutanmsa/catkin_ws/src/laser_geometry/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
@@ -31,6 +33,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/sutanmsa/catkin_ws/build/laser_geometry/CMakeFiles/laser_geometry.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
