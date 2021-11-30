@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  
+C_FLAGS = -O3 -DNDEBUG  
 
 C_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ydlidar_ros\"
 
 C_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/sutanmsa/catkin_ws/src/ydlidar_ros/src -I/home/sutanmsa/catkin_ws/src/ydlidar_ros/sdk/include -I/home/sutanmsa/catkin_ws/src/ydlidar_ros/sdk/src 
 
-CXX_FLAGS =  -std=c++11  
+CXX_FLAGS =  -std=c++11 -O3 -DNDEBUG  
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ydlidar_ros\"
 

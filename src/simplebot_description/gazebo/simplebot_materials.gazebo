@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<robot name="simplebot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/White" />
+<xacro:property name="wheels_color" value="Gazebo/Black" />
+<xacro:property name="lidar_color" value="Gazebo/Red" />
+<xacro:property name="camera_color" value="Gazebo/Blue" />
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <material>${wheels_color}</material>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <material>${wheels_color}</material>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${lidar_color}</material>
+</gazebo>
+
+<gazebo reference="camera_1">
+  <material>${camera_color}</material>
+</gazebo>
+
+
+</robot>
