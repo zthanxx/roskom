@@ -7,4 +7,19 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+ 
+ <!-- Tranform all frame-->
+  <node pkg="tf" type="static_transform_publisher" name="robot_link_to_laser"
+    args="0.0 0.0 0.0 3.141592 0.0 0.0 rplidar_1 laser 100" />
+<node pkg="tf" type="static_transform_publisher" name="robot_link_to_camera"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 t265_1 camera_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_camera_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 odom  camera_odom_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="camera_to_base"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100" />
+
+   <!-- Launch a rqt steering GUI for publishing to /cmd_vel -->
+        <node pkg="rqt_robot_steering" type="rqt_robot_steering" name="rqt_robot_steering" >
+            <param name="default_topic" value="/cmd_vel"/>
+            </node>
 </launch>
