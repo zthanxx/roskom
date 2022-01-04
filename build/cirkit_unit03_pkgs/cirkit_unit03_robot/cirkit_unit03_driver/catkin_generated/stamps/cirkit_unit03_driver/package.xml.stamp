@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cirkit_unit03_driver</name>
+  <version>0.1.0</version>
+  <description>The cirkit_unit03_driver package</description>
+
+  <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
+  <maintainer email="o111027y@mail.kyutech.jp">Doi Yusuke</maintainer>
+  <license>BSD</license>
+  <url type="repository">https://github.com/CIR-KIT-Unit03/cirkit_unit03_robot.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03_robot/issues</url>
+  <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf</depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>rosserial_python</exec_depend>
+  <!--<exec_depend>roslaunch</exec_depend>--> <!-- this is for launch test -->
+</package>

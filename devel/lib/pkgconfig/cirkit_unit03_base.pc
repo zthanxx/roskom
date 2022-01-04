@@ -1,0 +1,8 @@
+prefix=/home/sutanmsa/catkin_ws/devel
+
+Name: cirkit_unit03_base
+Description: Description of cirkit_unit03_base
+Version: 0.0.1
+Cflags: -I/home/sutanmsa/catkin_ws/src/cirkit_unit03_pkgs/cirkit_unit03_robot/cirkit_unit03_base/include
+Libs: -L${prefix}/lib 
+Requires: roscpp hardware_interface controller_manager

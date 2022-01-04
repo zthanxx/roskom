@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cirkit_unit03_robot</name>
+  <version>0.1.0</version>
+  <description>
+    This package provides packages for cirkit_unit03_robot.
+  </description>
+  <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
+  <maintainer email="o111027y@mail.kyutech.jp">Doi Yusuke</maintainer>
+  <maintainer email="k104073r@mail.kyutech.jp">Ryodo Tanaka</maintainer>
+  <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/CIR-KIT-Unit03/cirkit_unit03_robot.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03_robot/issues</url>
+  <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>cirkit_unit03_bringup</exec_depend>
+  <exec_depend>cirkit_unit03_driver</exec_depend>
+
+  <export>
+    <metapackage />
+  </export>
+</package>

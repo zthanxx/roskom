@@ -1,0 +1,8 @@
+prefix=/home/sutanmsa/catkin_ws/install
+
+Name: cirkit_unit03_driver
+Description: Description of cirkit_unit03_driver
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp geometry_msgs nav_msgs sensor_msgs tf
