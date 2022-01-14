@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>steer_wheel_bot_controller</name>
+  <version>0.0.0</version>
+<description>The steer_wheel_bot_description package</description>
+
+  <maintainer email="syuntoku14@todo.todo">syuntoku14</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+ <exec_depend>ackermann_steering_controller</exec_depend>
+    <exec_depend>controller_manager</exec_depend>
+    <exec_depend>joint_state_controller</exec_depend>
+    <exec_depend>robot_state_publisher</exec_depend>
+    <exec_depend>roslaunch</exec_depend>
+    <exec_depend>steer_bot_description</exec_depend>
+    <exec_depend>steer_drive_controller</exec_depend>
+</package>
