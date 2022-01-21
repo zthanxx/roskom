@@ -1,0 +1,390 @@
+<?xml version="1.0" ?>
+<robot name="mobile_mover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find steer_wheel_bot_description)/urdf/materials2.xacro" />
+<xacro:include filename="$(find steer_wheel_bot_description)/urdf/mobile_mover.trans" />
+<xacro:include filename="$(find steer_wheel_bot_description)/urdf/mobile_mover.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.23317561352724503 0.04188257119561364 0.2703989236073173"/>
+    <mass value="44.51856364368825"/>
+    <inertia ixx="2.079258" ixy="-0.0" ixz="-0.435412" iyy="1.555503" iyz="-0.0" izz="2.957514"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_steer_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.0441180627368585e-06 -4.299779410021909e-07 -0.047823587226302866"/>
+    <mass value="0.5241167973513366"/>
+    <inertia ixx="0.001969" ixy="-0.0" ixz="-0.0" iyy="0.001214" iyz="0.0" izz="0.000984"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.095315 0.189117 -0.233564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_right_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.095315 0.189117 -0.233564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_right_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_steer_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.044478136416065e-06 -4.298018361215128e-07 -0.04782358688912092"/>
+    <mass value="0.5241167977909424"/>
+    <inertia ixx="0.001969" ixy="-0.0" ixz="-0.0" iyy="0.001214" iyz="0.0" izz="0.000984"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.095315 -0.272883 -0.233564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_left_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.095315 -0.272883 -0.233564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_left_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="frame_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.17524070367050704 -0.22039804841856286 0.046187697173592"/>
+    <mass value="56.88074843558096"/>
+    <inertia ixx="2.699692" ixy="0.0" ixz="-0.032419" iyy="4.683623" iyz="0.0" izz="7.35659"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.06888 -0.261883 -0.416956"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.06888 -0.261883 -0.416956"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="holder_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010271011177415967 4.5429540449171135e-05 0.04467777362627379"/>
+    <mass value="3.539553306950206"/>
+    <inertia ixx="0.012719" ixy="-9e-06" ixz="5.8e-05" iyy="0.011103" iyz="0.0" izz="0.015721"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.215468 -0.041485 -0.486652"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.215468 -0.041485 -0.486652"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rplidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.4956952590637904e-07 -4.622064599113518e-08 0.020015469663036356"/>
+    <mass value="1.422201622524844"/>
+    <inertia ixx="0.000694" ixy="-0.0" ixz="0.0" iyy="0.000694" iyz="-0.0" izz="0.001005"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.215468 -0.041485 -0.576652"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.215468 -0.041485 -0.576652"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t265_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004999890006068153 -3.6964643630038596e-07 1.6632066934807455e-07"/>
+    <mass value="0.18951150233067984"/>
+    <inertia ixx="0.000158" ixy="0.0" ixz="-0.0" iyy="1.1e-05" iyz="0.0" izz="0.00015"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.267613 -0.04192 -0.539152"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/t265_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.267613 -0.04192 -0.539152"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/t265_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_steer_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.6325265601044876e-08 -4.298912406122679e-07 0.012499701139937702"/>
+    <mass value="0"/>
+    <inertia ixx="0.000154" ixy="-0.0" ixz="0.0" iyy="0.000154" iyz="0.0" izz="0.00025"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.142076 -0.041883 -0.385564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.142076 -0.041883 -0.385564"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+<link name="front_right_wheel_1">
+  <inertial>
+     <origin rpy="0 0 0" xyz="-0.0017259358567945776 0.04496637308849069 8.831674661036182e-08"/>
+    <mass value="10.890647375550827"/>
+    <inertia ixx="0.062923" ixy="-0.001414" ixz="-0.0" iyy="0.099705" iyz="0.0" izz="0.062869"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.096984 0.234086 -0.112327"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+     <origin rpy="0 0 0" xyz="-0.096984 0.234086 -0.112327"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+<link name="front_left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00172593584430214 0.04496637326778047 8.831671204079239e-08"/>
+    <mass value="10.890647375550806"/>
+    <inertia ixx="0.062923" ixy="-0.001414" ixz="0.0" iyy="0.099705" iyz="0.0" izz="0.062869"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.096984 -0.227914 -0.112327"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+  <origin rpy="0 0 0" xyz="-0.096984 -0.227914 -0.112327"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+
+<link name="Component221_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3089888273309924e-07 0.03999957010876765 -6.694811874319306e-08"/>
+    <mass value="0.1972920186454391"/>
+    <inertia ixx="0.00011" ixy="-0.0" ixz="0.0" iyy="1e-05" iyz="-0.0" izz="0.00011"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.398806 -0.001883 -0.186215"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/Component221_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.398806 -0.001883 -0.186215"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/Component221_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3089887962447477e-07 0.0049995701087678646 -6.694811729990313e-08"/>
+    <mass value="0"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="1e-05" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.398806 -0.041883 -0.186215"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.398806 -0.041883 -0.186215"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.5702725187380935e-07 0.022393609573460982 6.257626461447785e-08"/>
+    <mass value="70.08809133279846"/>
+    <inertia ixx="0.888586" ixy="0.0" ixz="-1e-06" iyy="1.690944" iyz="0.0" izz="0.888588"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.324712 -0.336883 -0.192691"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.324712 -0.336883 -0.192691"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5516554191519205e-07 -0.02239446935592715 -3.4935295906146635e-07"/>
+    <mass value="70.08809133279846"/>
+    <inertia ixx="0.888589" ixy="-0.0" ixz="-0.0" iyy="1.690944" iyz="-0.0" izz="0.888586"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.324712 0.253117 -0.192691"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.324712 0.253117 -0.192691"/>
+    <geometry>
+      <mesh filename="package://steer_wheel_bot_description/meshes/mobile_mover/rear_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="front_right_steer_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.095315 -0.189117 0.233564"/>
+  <parent link="base_link"/>
+  <child link="front_right_steer_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit effort="100" lower="-0.923599" upper="0.923599" velocity="100"/>
+</joint>
+
+<joint name="front_left_steer_joint" type="revolute">
+  <origin rpy="0 0 0" xyz="0.095315 0.272883 0.233564"/>
+  <parent link="base_link"/>
+  <child link="front_left_steer_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit effort="100" lower="-0.923599" upper="0.923599" velocity="100"/>
+</joint>
+
+<joint name="base_frame" type="fixed">
+  <origin rpy="0 0 0" xyz="0.06888 0.261883 0.416956"/>
+  <parent link="base_link"/>
+  <child link="frame_1"/>
+</joint>
+
+<joint name="frame_holder" type="fixed">
+  <origin rpy="0 0 0" xyz="0.146588 -0.220398 0.069696"/>
+  <parent link="frame_1"/>
+  <child link="holder_1"/>
+</joint>
+
+<joint name="holder_lidar" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.09"/>
+  <parent link="holder_1"/>
+  <child link="rplidar_1"/>
+</joint>
+
+<joint name="holder_camera" type="fixed">
+  <origin rpy="0 0 0" xyz="0.052145 0.000435 0.0525"/>
+  <parent link="holder_1"/>
+  <child link="t265_1"/>
+</joint>
+
+<joint name="front_steer_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.142076 0.041883 0.385564"/>
+  <parent link="base_link"/>
+  <child link="front_steer_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="front_right_wheel_joint" type="continuous">
+ <origin rpy="0 0 0" xyz="0.001669 -0.044969 -0.121237"/>
+  <parent link="front_right_steer_1"/>
+  <child link="front_right_wheel_1"/>
+   <axis xyz="-0.038364 0.999264 0.0"/>
+</joint>
+
+<joint name="front_left_wheel_joint" type="continuous">
+   <origin rpy="0 0 0" xyz="0.001669 -0.044969 -0.121237"/>
+  <parent link="front_left_steer_1"/>
+  <child link="front_left_wheel_1"/>
+   <axis xyz="-0.038364 0.999264 0.0"/>
+</joint>
+
+<joint name="Rigid66" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.398806 0.001883 0.186215"/>
+  <parent link="base_link"/>
+  <child link="Component221_1"/>
+</joint>
+
+<joint name="rear_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.04 0.0"/>
+  <parent link="Component221_1"/>
+  <child link="rear_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rear_left_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.324712 0.336883 0.192691"/>
+  <parent link="base_link"/>
+  <child link="rear_left_wheel_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="rear_right_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.324712 -0.253117 0.192691"/>
+  <parent link="base_link"/>
+  <child link="rear_right_wheel_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+</robot>
