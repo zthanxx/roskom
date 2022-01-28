@@ -28,8 +28,8 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-3.14</min_angle>
-            <max_angle>3.14</max_angle>
+            <min_angle>-2.14</min_angle>
+            <max_angle>2.14</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -53,6 +53,12 @@
       </plugin>
     </sensor>
   </gazebo>
+
+  <xacro:include filename="$(find realsense_ros_gazebo)/xacro/tracker.xacro"/>
+
+<xacro:realsense_T265 sensor_name="camera" parent_link="t265_1" rate="30.0">
+  <origin rpy="0 0 0" xyz="0 0 0.5"/>
+</xacro:realsense_T265>
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>

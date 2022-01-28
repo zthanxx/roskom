@@ -52,5 +52,16 @@
             respawn="false" output="screen" />
 
     </group>
+<node pkg="tf" type="static_transform_publisher" name="lidar_to_lidar"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 rplidar_1 mobile_mover/rplidar_1 100" />
 
+    <!-- <node pkg="tf" type="static_transform_publisher" name="robot_link_to_camera"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 t265_1 camera_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_camera_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 odom  camera_odom_frame 100" /> -->
+<!-- <node pkg="tf" type="static_transform_publisher" name="camera_to_base"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100" /> -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 map odom 100" /> -->
 </launch>
