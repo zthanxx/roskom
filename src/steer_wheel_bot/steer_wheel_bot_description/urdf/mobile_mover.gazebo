@@ -57,7 +57,7 @@
   <xacro:include filename="$(find realsense_ros_gazebo)/xacro/tracker.xacro"/>
 
 <xacro:realsense_T265 sensor_name="camera" parent_link="t265_1" rate="30.0">
-  <origin rpy="0 0 0" xyz="0 0 0.5"/>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
 </xacro:realsense_T265>
 <gazebo reference="base_link">
   <material>${body_color}</material>
@@ -118,15 +118,15 @@
 
 <gazebo reference="front_right_wheel_1">
   <material>${body_color}</material>
-  <mu1>1000</mu1>
-  <mu2>1000</mu2>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="front_left_wheel_1">
   <material>${body_color}</material>
-  <mu1>1000</mu1>
-  <mu2>1000</mu2>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
@@ -139,15 +139,15 @@
 
 <gazebo reference="rear_wheel_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="rear_left_wheel_1">
   <material>${body_color}</material>
-  <mu1>1000</mu1>
-  <mu2>1000</mu2>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 

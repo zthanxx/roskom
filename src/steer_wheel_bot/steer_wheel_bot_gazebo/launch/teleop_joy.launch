@@ -1,4 +1,6 @@
 <launch>
+
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
   <arg name="joy_config" default="ps3" />
   <arg name="joy_dev" default="/dev/input/js0" />
   <arg name="config_filepath" default="$(find steer_wheel_bot_controller)/config/$(arg joy_config).config.yaml" />
@@ -11,5 +13,8 @@
 
   <node pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node">
     <rosparam command="load" file="$(arg config_filepath)" />
+       <remap from="cmd_vel" to="/mobile_mover/ackermann_steering_controller/cmd_vel"/>
   </node>
+
+  
 </launch>
