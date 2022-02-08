@@ -8,7 +8,7 @@
   - rviz view
  -->
 <launch>
-
+<arg name="use_sim_time" value="true"/>
 
         <!--  ************** Navigation ***************  -->
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
@@ -31,7 +31,7 @@
 
 
 	<!--  ****** Maps *****  -->
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find steer_wheel_bot_navigation)/maps/mm_sim.yaml" output="screen">
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find steer_wheel_bot_navigation)/maps/sampleroom.yaml" output="screen">
                 <param name="frame_id" value="map"/>
 	</node>
 
@@ -40,7 +40,7 @@
 
 	        <param name="initial_pose_x"            value="0"/>
 		<param name="initial_pose_y"            value="0"/>
-		<param name="initial_pose_a"            value="1"/>
+		<param name="initial_pose_a"            value="0"/>
 	</node>
 
 	  <!--  **************** Visualisation ****************  -->
@@ -49,8 +49,8 @@
   <arg default="$(find steer_wheel_bot_rviz)/rviz/urdf.rviz" name="rvizconfig"/>
   <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
   <param name="use_gui" value="$(arg gui)"/>
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
 	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find steer_wheel_bot_navigation)/cfg/rviz_navigation.rviz"/>
 
 </launch>

@@ -303,7 +303,7 @@
   <origin rpy="0 0 0" xyz="0.095315 -0.189117 0.233564"/>
   <parent link="base_link"/>
   <child link="front_right_steer_1"/>
-  <axis xyz="-0.0 0.0 1.0"/>
+  <axis xyz="0.0 0.0 1.0"/>
   <limit effort="100" lower="-0.923599" upper="0.923599" velocity="100"/>
 </joint>
 
@@ -311,7 +311,7 @@
   <origin rpy="0 0 0" xyz="0.095315 0.272883 0.233564"/>
   <parent link="base_link"/>
   <child link="front_left_steer_1"/>
-  <axis xyz="-0.0 0.0 1.0"/>
+  <axis xyz="0.0 0.0 1.0"/>
   <limit effort="100" lower="-0.923599" upper="0.923599" velocity="100"/>
 </joint>
 
@@ -343,21 +343,21 @@
   <origin rpy="0 0 0" xyz="0.142076 0.041883 0.385564"/>
   <parent link="base_link"/>
   <child link="front_steer_1"/>
-  <axis xyz="0.0 -0.0 1.0"/>
+  <axis xyz="0.0 0.0 1.0"/>
 </joint>
 
 <joint name="front_right_wheel_joint" type="continuous">
  <origin rpy="0 0 0" xyz="0.001669 -0.044969 -0.121237"/>
   <parent link="front_right_steer_1"/>
   <child link="front_right_wheel_1"/>
-   <axis xyz="-0.038364 0.999264 0.0"/>
+   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="front_left_wheel_joint" type="continuous">
    <origin rpy="0 0 0" xyz="0.001669 -0.044969 -0.121237"/>
   <parent link="front_left_steer_1"/>
   <child link="front_left_wheel_1"/>
-   <axis xyz="-0.038364 0.999264 0.0"/>
+   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Rigid66" type="fixed">
@@ -377,14 +377,14 @@
   <origin rpy="0 0 0" xyz="-0.324712 0.336883 0.192691"/>
   <parent link="base_link"/>
   <child link="rear_left_wheel_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="rear_right_wheel_joint" type="continuous">
   <origin rpy="0 0 0" xyz="-0.324712 -0.253117 0.192691"/>
   <parent link="base_link"/>
   <child link="rear_right_wheel_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 </robot>
