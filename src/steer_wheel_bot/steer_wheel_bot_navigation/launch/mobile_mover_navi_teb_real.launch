@@ -10,7 +10,20 @@
 <launch>
 <arg name="use_sim_time" value="true"/>
 
-
+  <!-- <include file="$(find steer_wheel_bot_gazebo)/launch/teleop_joy.launch">
+  </include> -->
+  <node pkg="tf" type="static_transform_publisher" name="robot_link_to_laser"
+    args="0.0 0.0 0.0 3.141592 0.0 0.0 rplidar_1 laser 100" />
+<node pkg="tf" type="static_transform_publisher" name="robot_link_to_camera"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 t265_1 camera_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_camera_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 odom  camera_odom_frame 100" />
+<node pkg="tf" type="static_transform_publisher" name="camera_to_base"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100" />
+	 <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 map  odom 100" /> -->
+		 <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 map  camera_odom_frame 100" /> -->
 
         <!--  ************** Navigation ***************  -->
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
@@ -18,7 +31,7 @@
   	 	<rosparam file="$(find steer_wheel_bot_navigation)/cfg/carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
   		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/carlike/local_costmap_params.yaml" command="load" />
   		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/carlike/global_costmap_params.yaml" command="load" />
-  		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/carlike/teb_local_planner_params.yaml" command="load" />
+  		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/carlike/teb_real.yaml" command="load" />
 
 		<param name="base_global_planner" value="global_planner/GlobalPlanner" />
 		<param name="planner_frequency" value="1.0" />
@@ -28,18 +41,18 @@
 		<!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />  -->
 		<param name="controller_frequency" value="5.0" />
 		<param name="controller_patience" value="15.0" />
-<remap from="cmd_vel" to="/mobile_mover/ackermann_steering_controller/cmd_vel"/>
+<!-- <remap from="cmd_vel" to="/mobile_mover/ackermann_steering_controller/cmd_vel"/> -->
                 <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
 	</node>
 
 
 	<!--  ****** Maps *****  -->
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find steer_wheel_bot_navigation)/maps/4x7.yaml" output="screen">
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find steer_wheel_bot_navigation)/maps/garrage.yaml" output="screen">
                 <param name="frame_id" value="map"/>
 	</node>
 
 	<node pkg="amcl" type="amcl" name="amcl" output="screen">
-		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/amcl_params.yaml" command="load" />
+		<rosparam file="$(find steer_wheel_bot_navigation)/cfg/amcl_params_real.yaml" command="load" />
 
 	        <param name="initial_pose_x"            value="0"/>
 		<param name="initial_pose_y"            value="0"/>
@@ -47,13 +60,13 @@
 	</node>
 
 	  <!--  **************** Visualisation ****************  -->
-<arg default="$(find steer_wheel_bot_description)/urdf/mobile_mover.xacro" name="model"/>
+  <arg default="$(find base_link_description)/urdf/base_link.xacro" name="model"/>
   <arg default="true" name="gui"/>
-  <arg default="$(find steer_wheel_bot_rviz)/rviz/urdf.rviz" name="rvizconfig"/>
+  <arg default="$(find base_link_description)/launch/urdf.rviz" name="rvizconfig"/>
   <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
   <param name="use_gui" value="$(arg gui)"/>
-  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
-	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find steer_wheel_bot_navigation)/cfg/rviz_navigation.rviz"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find steer_wheel_bot_navigation)/cfg/rviz_navigation_real.rviz"/>
 
 </launch>

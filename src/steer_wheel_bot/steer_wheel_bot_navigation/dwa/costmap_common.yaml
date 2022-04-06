@@ -8,9 +8,9 @@ footprint_padding: 0.01
 laser_sensor_layer:
   observation_sources: laser
   laser:
-    sensor_frame: laser
+    sensor_frame: mobile_mover/rplidar_1
     data_type: LaserScan
-    topic: '/sensors/laser'
+    topic: '/scan'
     marking: true
     clearing: true
     inf_is_valid: true
