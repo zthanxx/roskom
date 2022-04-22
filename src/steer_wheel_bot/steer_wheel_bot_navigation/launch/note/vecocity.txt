@@ -1,0 +1,22 @@
+slow mode
+1.24. 57
+2.24.45
+3.24.81
+
+medium mode :
+1. 9.50
+2.8.61
+3.8.83
+4. 8.23
+5.8.41
+
+fast mode :
+1. 5.83
+2.5.88
+3. 6.04
+4. 6.16
+
+ Current time: 1649819757.3398, global_pose stamp: 1649819756.8064, tolerance: 0.5000
+[ WARN] [1649819757.340078973]: Could not get robot pose, cancelling reconfiguration
+[ WARN] [1649819763.396097396]: Costmap2DROS transform timeout. Current time: 1649819763.3960, global_pose stamp: 1649819762.8606, tolerance: 0.5000
+[ WARN] [1649819763.396212105]: Could not get robot pose, cancelling reconfiguration
