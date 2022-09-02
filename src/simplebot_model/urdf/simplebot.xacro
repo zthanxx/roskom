@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<robot name="simplebot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find simplebot_model)/gazebo/simplebot_materials.gazebo" />
+<xacro:include filename="$(find simplebot_model)/urdf/materials.xacro" />
+<xacro:include filename="$(find simplebot_model)/urdf/simplebot.trans" />
+<xacro:include filename="$(find simplebot_model)/gazebo/simplebot_physics.gazebo" />
+<xacro:include filename="$(find simplebot_model)/gazebo/simplebot_plugin.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0008958133316573727 0.0 0.07334595632265822" rpy="0 0 0"/>
+    <mass value="24.253315883237242"/>
+    <inertia ixx="0.084089" iyy="0.193759" izz="0.264182" ixy="-0.0" iyz="0.0" ixz="3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rw_link_1">
+  <inertial>
+    <origin xyz="3.783431901105416e-15 -0.014774612406027232 1.1102230246251565e-16" rpy="0 0 0"/>
+    <mass value="4.6526942950040535"/>
+    <inertia ixx="0.007668" iyy="0.014653" izz="0.007668" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015 0.1 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/rw_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015 0.1 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/rw_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lw_link_1">
+  <inertial>
+    <origin xyz="-8.621575675604731e-16 0.014774612406027288 -1.970645868709653e-15" rpy="0 0 0"/>
+    <mass value="4.6526942950040535"/>
+    <inertia ixx="0.007668" iyy="0.014653" izz="0.007668" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015 -0.1 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/lw_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015 -0.1 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/lw_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="holder_link_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 -1.7763568394002505e-17 0.012500000000000067" rpy="0 0 0"/>
+    <mass value="0.9616249999999998"/>
+    <inertia ixx="0.000443" iyy="0.000443" izz="0.000785" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.08 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/holder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.08 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/holder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin xyz="0.0 -2.923226713048494e-17 0.014339567492747979" rpy="0 0 0"/>
+    <mass value="0.2674383802440297"/>
+    <inertia ixx="9.3e-05" iyy="2.8e-05" izz="8.3e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin xyz="1.3877787807814457e-17 -1.7763568394002502e-17 0.013418548209924386" rpy="0 0 0"/>
+    <mass value="0.32894051405948144"/>
+    <inertia ixx="5.9e-05" iyy="5.9e-05" izz="7.7e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.08 0.0 -0.125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.08 0.0 -0.125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplebot_model/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rw_joint" type="continuous">
+  <origin xyz="-0.015 -0.1 0.075" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rw_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="lw_joint" type="continuous">
+  <origin xyz="-0.015 0.1 0.075" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lw_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="holder_joint" type="fixed">
+  <origin xyz="0.08 0.0 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="holder_link_1"/>
+</joint>
+
+<joint name="camera_joint" type="fixed">
+  <origin xyz="0.14 0.0 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="holder_link_1"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+</robot>
