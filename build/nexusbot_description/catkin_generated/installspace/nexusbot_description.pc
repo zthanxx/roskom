@@ -1,0 +1,8 @@
+prefix=/home/sutanmsa/catkin_ws/install
+
+Name: nexusbot_description
+Description: Description of nexusbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

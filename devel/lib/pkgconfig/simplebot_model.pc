@@ -1,0 +1,8 @@
+prefix=/home/sutanmsa/catkin_ws/devel
+
+Name: simplebot_model
+Description: Description of simplebot_model
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

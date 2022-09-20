@@ -1,0 +1,8 @@
+prefix=/home/sutanmsa/catkin_ws/devel
+
+Name: gazebo_ros_diff_drive_multiwheel
+Description: Description of gazebo_ros_diff_drive_multiwheel
+Version: 2.5.20
+Cflags: -I/home/sutanmsa/catkin_ws/src/gazebo_ros_diff_drive_multiwheel/include
+Libs: -L${prefix}/lib -lgazebo_ros_diff_drive_multiwheel -lgazebo_ros_utils
+Requires: cv_bridge dynamic_reconfigure gazebo_msgs geometry_msgs message_generation message_runtime nodelet nodelet rosconsole roscpp rosgraph_msgs rospy sensor_msgs std_srvs tf tf2_ros nav_msgs trajectory_msgs urdf

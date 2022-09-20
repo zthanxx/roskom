@@ -1,0 +1,259 @@
+<?xml version="1.0" ?>
+<robot name="nexusbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find nexusbot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find nexusbot_description)/urdf/nexusbot.trans" />
+<xacro:include filename="$(find nexusbot_description)/urdf/nexusbot.gazebo" />
+<xacro:include filename="$(find nexusbot_description)/gazebo/nexusbot_materials.gazebo" />
+<xacro:include filename="$(find nexusbot_description)/gazebo/nexusbot_physics.gazebo" />
+<xacro:include filename="$(find nexusbot_description)/gazebo/nexusbot_plugin.gazebo" />
+
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="3.6768873951834407e-10 0.0053825688307286255 0.20941756857427393" rpy="0 0 0"/>
+    <mass value="27.053930631957453"/>
+    <inertia ixx="1.101454" iyy="1.048028" izz="0.2368" ixy="-0.0" iyz="-0.032034" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin xyz="5.022872033704671e-18 5.022872033704671e-18 0.015000000000000013" rpy="0 0 0"/>
+    <mass value="0.8883778743776359"/>
+    <inertia ixx="0.000332" iyy="0.000332" izz="0.000534" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.48" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.48" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lw1_1">
+  <inertial>
+    <origin xyz="0.01987617902945761 0.0 0.0" rpy="0 0 0"/>
+    <mass value="1.5680468801027019"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1 0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1 0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lw2_1">
+  <inertial>
+    <origin xyz="0.019876179029457625 0.0 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="1.5680468801027012"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1 -0.0 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1 -0.0 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lw3_1">
+  <inertial>
+    <origin xyz="0.019876179029457583 -1.3877787807814457e-16 -5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="1.5680468801027012"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1 -0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1 -0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/lw3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rw1_1">
+  <inertial>
+    <origin xyz="-0.019876179029457555 0.0 0.0" rpy="0 0 0"/>
+    <mass value="1.568046880102702"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1 0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1 0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rw2_1">
+  <inertial>
+    <origin xyz="-0.019876179029457625 1.7763568394002505e-17 0.0" rpy="0 0 0"/>
+    <mass value="1.5680468801027023"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1 -0.0 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1 -0.0 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rw3_1">
+  <inertial>
+    <origin xyz="-0.01987617902945764 0.0 0.0" rpy="0 0 0"/>
+    <mass value="1.5680468801027014"/>
+    <inertia ixx="0.001247" iyy="0.00083" izz="0.00083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1 -0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1 -0.1275 -0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/rw3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin xyz="1.1175870895385742e-09 1.4528632411719977e-09 0.009999999999999953" rpy="0 0 0"/>
+    <mass value="0.2447480633740049"/>
+    <inertia ixx="1.3e-05" iyy="0.000229" izz="0.000225" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.012 -0.405" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.012 -0.405" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nexusbot_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="lidar_joint" type="continuous">
+  <origin xyz="0.0 0.0 0.48" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_link_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="lw1_joint" type="continuous">
+  <origin xyz="0.1 -0.1275 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lw1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="lw2_joint" type="continuous">
+  <origin xyz="0.1 0.0 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lw2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="lw3_joint" type="continuous">
+  <origin xyz="0.1 0.1275 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lw3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="rw1_joint" type="continuous">
+  <origin xyz="-0.1 -0.1275 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rw1_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="rw2_joint" type="continuous">
+  <origin xyz="-0.1 0.0 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rw2_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="rw3_joint" type="continuous">
+  <origin xyz="-0.1 0.1275 0.035" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rw3_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="camera_fix" type="fixed">
+  <origin xyz="0.0 -0.012 0.405" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+
+
+</robot>

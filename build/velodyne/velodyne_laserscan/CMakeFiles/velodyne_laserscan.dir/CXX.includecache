@@ -32,12 +32,6 @@ nodelet/nodelet.h
 velodyne_laserscan/velodyne_laserscan.h
 /home/sutanmsa/catkin_ws/src/velodyne/velodyne_laserscan/src/velodyne_laserscan/velodyne_laserscan.h
 
-/home/sutanmsa/catkin_ws/src/velodyne/velodyne_laserscan/src/velodyne_laserscan.cpp
-velodyne_laserscan/velodyne_laserscan.h
-/home/sutanmsa/catkin_ws/src/velodyne/velodyne_laserscan/src/velodyne_laserscan/velodyne_laserscan.h
-sensor_msgs/point_cloud2_iterator.h
--
-
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp
 -
@@ -1084,30 +1078,6 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
--
-
-/opt/ros/noetic/include/sensor_msgs/impl/point_cloud2_iterator.h
-sensor_msgs/PointCloud2.h
--
-cstdarg
--
-sstream
--
-string
--
-vector
--
-
-/opt/ros/noetic/include/sensor_msgs/point_cloud2_iterator.h
-sensor_msgs/PointCloud2.h
--
-cstdarg
--
-string
--
-vector
--
-sensor_msgs/impl/point_cloud2_iterator.h
 -
 
 /opt/ros/noetic/include/std_msgs/Header.h

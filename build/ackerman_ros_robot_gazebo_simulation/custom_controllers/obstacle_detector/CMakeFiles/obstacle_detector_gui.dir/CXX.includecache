@@ -274,19 +274,11 @@ QPushButton
 QLabel
 -
 
-/home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/circle_visual.cpp
-obstacle_detector/displays/circle_visual.h
-/home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/obstacle_detector/displays/circle_visual.h
-
 /home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/obstacles_display.cpp
 obstacle_detector/displays/obstacles_display.h
 /home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/obstacle_detector/displays/obstacles_display.h
 pluginlib/class_list_macros.h
 -
-
-/home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/segment_visual.cpp
-obstacle_detector/displays/segment_visual.h
-/home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/displays/obstacle_detector/displays/segment_visual.h
 
 /home/sutanmsa/catkin_ws/src/ackerman_ros_robot_gazebo_simulation/custom_controllers/obstacle_detector/src/panels/obstacle_extractor_panel.cpp
 obstacle_detector/panels/obstacle_extractor_panel.h

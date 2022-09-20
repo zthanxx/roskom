@@ -169,8 +169,8 @@ dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/dynamixel_workbench
 
 /home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv/GetDynamixelInfo.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv/GetDynamixelInfo.js: /home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/GetDynamixelInfo.srv
-/home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv/GetDynamixelInfo.js: /home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelLoadInfo.msg
 /home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv/GetDynamixelInfo.js: /home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelInfo.msg
+/home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv/GetDynamixelInfo.js: /home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelLoadInfo.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sutanmsa/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating Javascript code from dynamixel_workbench_msgs/GetDynamixelInfo.srv"
 	cd /home/sutanmsa/catkin_ws/build/dynamixel-workbench-msgs/dynamixel_workbench_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/GetDynamixelInfo.srv -Idynamixel_workbench_msgs:/home/sutanmsa/catkin_ws/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_workbench_msgs -o /home/sutanmsa/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/srv
 

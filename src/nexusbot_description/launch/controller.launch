@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find nexusbot_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="nexusbot" args="lidar_joint_position_controller lw1_joint_position_controller lw2_joint_position_controller lw3_joint_position_controller rw1_joint_position_controller rw2_joint_position_controller rw3_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/nexusbot/joint_states"/>
+</node>
+
+</launch>

@@ -2,7 +2,7 @@ prefix=/home/sutanmsa/catkin_ws/install
 
 Name: simplebot_description
 Description: Description of simplebot_description
-Version: 0.0.0
+Version: 0.2.4
 Cflags: 
 Libs: -L${prefix}/lib 
 Requires: 

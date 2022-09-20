@@ -22,8 +22,6 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
-/home/sutanmsa/catkin_ws/build/open_manipulator/open_manipulator_control_gui/qrc_images.cpp
-
 /home/sutanmsa/catkin_ws/devel/include/open_manipulator_control_gui/ui_main_window.h
 QtCore/QLocale
 -

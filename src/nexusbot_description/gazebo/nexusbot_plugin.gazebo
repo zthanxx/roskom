@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<robot name="nexusbot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<!-- <xacro:include filename="$(find realsense_ros_gazebo)/xacro/tracker.xacro"/>
+
+<xacro:realsense_T265 sensor_name="camera" parent_link="odom" rate="30.0">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+</xacro:realsense_T265> -->
+  <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+ <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive_multiwheel.so">
+        <updateRate>50</updateRate>
+        <leftJoints>lw3_joint lw2_joint  lw1_joint </leftJoints>
+        <rightJoints>rw3_joint rw2_joint rw1_joint </rightJoints>
+        <wheelSeparation>0.2</wheelSeparation>
+        <wheelDiameter>0.13</wheelDiameter>
+        <wheelAcceleration>0.2</wheelAcceleration>
+        <wheelTorque>5</wheelTorque>
+        <commandTopic>/cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <odometrySource>1</odometrySource>
+        <publishWheelTF>true</publishWheelTF>
+        <publishOdomTF>true</publishOdomTF>
+        <publishWheelJointState>true</publishWheelJointState>
+        <legacyMode>false</legacyMode>
+    </plugin>
+</gazebo>
+<!-- <gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <updateRate>100</updateRate>
+
+
+    <leftJoint>lw1_joint</leftJoint>
+
+  
+    <rightJoint>rw1_joint</rightJoint>
+
+
+    <wheelSeparation>0.2</wheelSeparation>
+
+ 
+    <wheelDiameter>0.08</wheelDiameter>
+
+   
+    <wheelAcceleration>2.5</wheelAcceleration>
+
+
+    <wheelTorque>50</wheelTorque>
+
+
+    <commandTopic>cmd_vel</commandTopic>
+
+   
+    <odometryTopic>odom</odometryTopic>
+
+ 
+    <odometryFrame>odom</odometryFrame>
+
+
+    <robotBaseFrame>base_link</robotBaseFrame>
+
+
+    <odometrySource>1</odometrySource>
+
+   
+    <publishWheelTF>true</publishWheelTF>
+
+
+    <publishOdom>true</publishOdom>
+
+
+    <publishWheelJointState>true</publishWheelJointState>
+
+
+    <legacyMode>false</legacyMode>
+  </plugin>
+</gazebo> -->
+  
+
+
+</robot>
